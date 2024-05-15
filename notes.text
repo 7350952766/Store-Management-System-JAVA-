@@ -1,0 +1,14 @@
+create database store_management_system
+
+create table product(id int PRIMARY KEY AUTO_INCREMENT, brand_name varchar(20), product_name varchar(20), price float, mfg_date date);
+
+create table stock(product_id int references product.id, quantity int);
+
+
+
+JDBC steps
+
+1) Load jdbc driver
+2) establish db connection using url, username, password and db name
+3) execute the query
+4) close connection
